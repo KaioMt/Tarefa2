@@ -1,7 +1,7 @@
 const express = require("express");
 const path=require ('path');//endereço de cada rota
 const {engine} = require("express-handlebars");
-const routesAdmin = require('./routes/routesAdim');
+const routesAdmin = require('./routes/routesAdm');
 const app = express();
 app.engine('handlebars', engine({
     defaultLayout: 'main',
@@ -13,7 +13,7 @@ app.engine('handlebars', engine({
 }))
 app.set('view engine', 'handlebars');
 
-app.use('/',routesAdmin)
+app.use('/Princi',routesAdmin)
 
 
 app.listen(process.env.port||3000);
