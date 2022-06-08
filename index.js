@@ -13,7 +13,7 @@ app.engine('handlebars', engine({
 }))
 app.set('view engine', 'handlebars');
 
-app.use('/Princi',routesAdmin)
+app.use('/',routesAdmin)
 
 
 app.listen(process.env.port||3000);
